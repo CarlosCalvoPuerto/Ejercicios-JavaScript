@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <script>
+
+        const MIN_DESCUENTO_1 = 1000;
+        const MIN_DESCUENTO_2 = 2000;
+
+        const EFECTIVO = "e";
+        const DEBITO = "d";
+        const CREDITO = "c";
+
+        var coste;
+        var tipoPago;
+
+
+        function facturacion(importe, pago) {
+
+            let metodoPago;
+            let precioFinal;
+            let descuento;
+
+            // GUARDA TIPO DE PAGO
+            if (pago == EFECTIVO) {
+                metodoPago = "Efectivo";
+            }
+            else if (pago == DEBITO) {
+                metodoPago = "Debito";
+            }
+            else if (pago == CREDITO) {
+                metodoPago = "Credito";
+            }
+
+            // CALCULA EL DESCUENTO
+            if (importe < MIN_DESCUENTO_1) {
+                // Sin descuento
+                descuento = "Sin descuento";
+                precioFinal = importe;
+            }
+            else if (importe >= MIN_DESCUENTO_1 && importe < MIN_DESCUENTO_2) {
+                if (pago == EFECTIVO) {
+                    // Descuento del 20% 
+                    descuento = "20%";
+                    precioFinal = importe - importe * .2;
+                }
+                else if (pago == DEBITO) {
+                    // Descuento del 15%
+                    descuento = "15%";
+                    precioFinal = importe - importe * .15;
+                }
+                else if (pago == CREDITO) {
+                    // Descuento del 10%
+                    descuento = "10%";
+                    precioFinal = importe - importe * .1;
+                }
+            }
+            else if (importe >= MIN_DESCUENTO_2) {
+                // Descuento del 30%
+                descuento = "30%";
+                precioFinal = importe - importe * .3;
+
+            }
+
+            // MUESTRA RESULTADO
+            document.write("--------------------------------------------------------------<br>")
+            document.write("El importe del producto es de: " + importe + "€ <br>");
+            document.write("El metodo de pago introducido es: " + metodoPago + " <br>");
+            document.write("Descuento aplicado: " + descuento + " <br>");
+            document.write("Prcio final: " + precioFinal + " <br>");
+            document.write("--------------------------------------------------------------<br>")
+
+        }
+
+        do {
+            coste = Number(prompt("Introduce el importe del producto"));
+        } while (coste<=0 || isNaN(coste))
+
+        // Calcular cual es el menor
+        do {
+            tipoPago = prompt("Introduce el tipo de pago:\n  C (tarjeta de crédito)\n  D (tarjeta de débito)\n  E (efectivo).");
+        }
+        while (tipoPago.toLowerCase() != CREDITO && tipoPago.toLowerCase() != DEBITO && tipoPago.toLowerCase() != EFECTIVO);
+
+        facturacion(coste, tipoPago);
+
+    </script>
+</body>
+
+</html>

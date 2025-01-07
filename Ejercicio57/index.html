@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        var num;
+
+        function pedirNumeros(posicion) {
+            do {
+                num = parseFloat(prompt("Introduzca el "+posicion+" numero..."));
+
+                if (isNaN(num)) {
+                    alert("ERROR: No ha introducido un valor numerico.\nIntentelo de nuevo.")
+                }
+            } while (isNaN(num))
+        }
+
+        function calculoMenor(val1, val2) {
+            if (val1 < val2) {
+                alert("El primer numero ("+val1+") es mas pequeño");
+            }
+            else if (val2 < val1) {
+                alert("El segundo numero ("+val2+") es mas pequeño");
+            }
+            else if (val1 == val2) {
+                alert("Ambos numeros tienen el mismo valor ("+val1+")");
+            }
+            else {
+                alert("No sabemos que ha ido mal");
+            }
+        }
+
+        // Pedir Numeros (Chapucero, mejor seria usar un return)
+        pedirNumeros("primer");
+        var num1 = num;
+        pedirNumeros("segundo");
+        var num2 = num;
+
+        // Calcular cual es el menor
+        calculoMenor(num1, num2);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

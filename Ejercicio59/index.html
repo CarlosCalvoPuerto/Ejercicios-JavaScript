@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        function tablaMultiplicar(valor) {
+            let multi;
+            document.write("<h1>Tabla de multiplicar del "+valor+"</h1>");
+
+            document.write("<ul>");
+            
+            for (let i=1;i<=10;i++) {
+                multi = i*valor;
+                document.write("<li>"+valor+"x "+i+"= "+multi+"</li>")
+            }
+            document.write("</ul>");
+
+        }
+
+        var num = parseInt(prompt("Introduce el numero de la tabla de multiplicar..."));
+
+        // Calcular cual es el menor
+        tablaMultiplicar(num);
+
+    </script>
+</body>
+</html>

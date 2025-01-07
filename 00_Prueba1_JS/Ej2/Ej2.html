@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+</head>
+<body>
+    <script>
+        var notaTeor, notaPract;
+
+        notaTeor=parseFloat(prompt("Introduzca la nota de la parte teorica..."));
+        notaPract=parseFloat(prompt("Introduzca la nota de la parte practica..."));
+
+        var notaMedia = (notaTeor+notaPract)/2;
+
+        if (notaPract<5 || notaTeor<5) {
+            document.write("Has Suspendido.<br>\
+            Nota de la Parte Teorica: ",notaTeor,'<br>\
+            Nota de la Parte Practica: ',notaPract);
+        }
+        else {
+            document.write("Has Aprobado.<br>\
+            Nota de la Parte Teorica: ",notaTeor,'<br>\
+            Nota de la Parte Practica: ',notaPract,'<br>\
+            Nota Final: ',notaMedia);
+        }
+    </script>
+</body>
+</html>

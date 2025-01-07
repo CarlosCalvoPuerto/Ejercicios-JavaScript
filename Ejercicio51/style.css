@@ -1,0 +1,21 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*, *::before, *::after {box-sizing: inherit;}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+/**/
+
+.contenedor_mostaza {
+    background-color: #c0be1e;
+    padding: 2rem;
+    max-width: 50rem;
+    margin: 1rem auto;
+}

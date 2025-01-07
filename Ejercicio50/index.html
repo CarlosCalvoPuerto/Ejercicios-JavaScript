@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+
+        var trabajadores = [];
+        var nombre = ""
+
+        do {
+            nombre = prompt('Introduzca un Nombre de trabajador');
+            if (nombre.toLowerCase() != "salir") {
+                trabajadores.push(nombre)
+            }
+        } while(nombre.toLowerCase() != "salir");
+        
+        for (let i = 0; i<trabajadores.length; i++ ) {
+            document.write("Trabajador "+(i+1)+"- "+trabajadores[i]+"<br>");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        var nota
+
+        do {
+            nota = parseFloat(prompt("Introduzca la nota del alumno..."));
+
+            if (isNaN(nota)) {
+                alert("ERROR: La nota introducida no es un numero.\nIntentelo de nuevo.")
+            }
+            else if (nota < 0 || nota > 10) {
+                alert("ERROR: La nota introducida esta fuera de rango.\nIntentelo de nuevo.")
+            }
+        } while (isNaN(nota) || nota < 0 || nota > 10)
+
+        switch (true) {
+            case (nota < 5):                  // Insuficiente
+                alert("Insuficiente");
+                break;
+            case (nota >= 5 && nota < 7):       // Aprobado
+                alert("Aprobado");
+                break;
+            case (nota >= 7 && nota < 9):     // Notable
+                alert("Notable");
+                break;
+            case (nota >= 9 && nota <= 10):     // Sobresaliente
+                alert("Sobresaliente");
+                break;
+            default:    // valor es distinto a los casos expuestos
+                alert("ERROR: Introdujo un numero fuera de rango");
+                break;
+        }
+    </script>
+</body>
+</html>

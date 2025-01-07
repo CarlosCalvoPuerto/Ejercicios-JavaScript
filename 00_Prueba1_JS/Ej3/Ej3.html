@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej3</title>
+</head>
+<body>
+    <script>
+        const NUM_COMP = 15;
+        var array = [];
+
+        for (let i =0; i<NUM_COMP;i++){
+            array[i] = prompt("Introduzca el nombre del alumno "+(i+1)+"...");
+        }
+        for (let i =0; i<NUM_COMP;i++){
+            document.write((i+1)+"- "+array[i]+ "<br>");
+        }
+        document.write("<br>Con este listado, acabamos el ejercicio 3");
+
+    </script>
+</body>
+</html>

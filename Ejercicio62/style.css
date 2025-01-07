@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*, *::before, *::after {box-sizing: inherit;}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+/**/
+
+.fondo-azul {
+    padding: 3rem 2rem;
+    background-color: #344d86;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0 0 5rem 0;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: #df6400;
+}
+
+.seccion {
+    margin: auto 5rem;
+    width: 50rem;
+    color: #fff;
+}
+h2 {
+    font-weight: 100;
+    border-bottom: 1px solid #fff;
+}
+.texto {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+}
+p {
+    margin: 0;
+}

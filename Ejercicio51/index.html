@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor_mostaza">
+        <p id="nombre">Nombre: </p>
+        <p id="edad">Edad: </p>
+        <p id="poblacion">Poblacion: </p>
+    </div>
+
+    <script>
+        var nombre;
+        var edad;
+        var poblacion;
+
+        do {
+            nombre = prompt('Introduzca un Nombre válido');
+        } while(!isNaN(nombre));
+        
+        do {
+            edad = parseInt(prompt('Introduzca un Edad válido'));
+        } while(isNaN(edad) || edad<0 || edad>100);
+            
+        do {
+            poblacion = prompt('Introduzca un Población válido');
+        } while(!isNaN(poblacion));
+
+        document.getElementById('nombre').innerHTML = document.getElementById('nombre').innerHTML+nombre;
+        document.getElementById('edad').innerHTML = document.getElementById('edad').innerHTML+edad;
+        document.getElementById('poblacion').innerHTML = document.getElementById('poblacion').innerHTML+poblacion;
+
+    </script>
+</body>
+</html>

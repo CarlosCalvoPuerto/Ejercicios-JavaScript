@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="fondo-azul">
+        <h1>Ejercicio 62 con JavaScript</h1>
+
+        <div class="seccion">
+            <h2>Practicando variables</h2>
+    
+            <div class="texto">
+                <p>Bienbenido <span id="nombre_apellido">a</span>.</p>
+                <p>Tienes <span id="edad">s</span> años.</p>
+                <p>Te gustaria tener <span id="años_quitar">d</span> años.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var nombre,apellido,edad,añosQuitar;
+
+        function visualizarDatos(name,surname,age,yearsTake) {
+
+            let restaEdad = age-yearsTake;
+
+            document.getElementById("nombre_apellido").innerHTML = (name + " " + surname);
+            document.getElementById("edad").innerHTML = age;
+            document.getElementById("años_quitar").innerHTML = restaEdad;
+
+        }
+
+        nombre = prompt("Introduzca su nombre...");
+        apellido = prompt("Introduzca su apellido...");
+        edad = parseInt(prompt("Introduzca su edad..."));
+        añosQuitar = Number(prompt("Introduzca cuantos años le gustaría quitarse..."));
+
+        visualizarDatos(nombre,apellido,edad,añosQuitar);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        /*
+        Utilizando Switch-Case vamos a realizar el siguiente ejercicio:
+
+        Vamos a escribir un programa que nos pida mediante ventana emergente un número
+        entre 1 y 7, y que devuelva en pantalla el nombre del día correspondiente de la semana.
+        El número 1 representará el lunes, el 2 el martes, y así sucesivamente hasta el 7, que
+        representará el domingo.
+        */
+
+        let valor;
+        valor = parseInt(prompt('Introduce un valor entre 1 y 7...'));
+
+        switch (valor) {
+            case 1:     // Caso valor == 1
+                document.write("Lunes");
+                break;
+            case 2:     // Caso valor == 2
+                document.write("Martes");
+                break;
+            case 3:     // Caso valor == 3
+                document.write("Miercoles");
+                break;
+            case 4:     // Caso valor == 3
+                document.write("Jueves");
+                break;
+            case 5:     // Caso valor == 3
+                document.write("Viernes");
+                break;
+            case 6:     // Caso valor == 3
+                document.write("Sabado");
+                break;
+            case 7:     // Caso valor == 3
+                document.write("Domingo");
+                break;
+            default:    // valor es distinto a los casos expuestos
+                document.write("ERROR: Introdujo un numero fuera de rango");
+                break;
+        }
+    </script>
+</body>
+</html>

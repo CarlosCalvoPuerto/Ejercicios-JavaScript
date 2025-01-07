@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        var digitalizate = [];
+        var nombre;
+        var num_alumn = 1;
+        do {
+            nombre = prompt("Introduzca el nombre del alumno "+num_alumn);
+            
+            if (!isNaN(nombre)) {
+                alert("ERROR: El nombre introducido no es valido.\nIntentelo de nuevo.")
+            }
+            else if(nombre.toLowerCase() != "salir") {
+                num_alumn++;
+                digitalizate.push(nombre)
+            }
+            else {
+                alert("Introducido salir");
+            }
+        } while (nombre.toLowerCase() != "salir")
+
+        for (let i in digitalizate) {
+            document.write(digitalizate[i]+"<br>");
+        }
+
+    </script>
+</body>
+</html>

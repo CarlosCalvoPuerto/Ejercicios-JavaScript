@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        var num1;
+        var num2;
+        var resultado
+        var valor;
+        
+        do {
+            do {
+                num1 = parseInt(prompt("Introduzca el primer numero..."));
+                num2 = parseInt(prompt("Introduzca el segundo numero..."));
+                
+                if (isNaN(num1) || isNaN(num2)) {
+                    alert("ERROR: Alguno de los valores que ha introducido no es un numero.\nIntentelo de nuevo.")
+                }
+            } while (isNaN(num1) || isNaN(num2))
+            
+            valor = parseInt(prompt('Elija que operacion desa realizar: \n  1: Sumar los dos números.\n  2: Restar los dos números.\n  3: Multiplicar los dos números.\n  4: Dividir los dos números.\n  5: Salir.'));
+
+            switch (valor) {
+                case 1:     // Sumar los dos números.
+                    resultado = num1 + num2;
+                    alert(num1+" + "+num2+" = "+resultado);
+                    break;
+                case 2:     // Restar los dos números.
+                    resultado = num1 - num2;
+                    alert(num1+" - "+num2+" = "+resultado);
+                    break;
+                case 3:     // Multiplicar los dos números.
+                    resultado = num1 * num2;
+                    alert(num1+" * "+num2+" = "+resultado);
+                    break;
+                case 4:     // Dividir los dos números.
+                    if (num2 == 0) {
+                        alert("ERROR: No se puede dividir entre 0")
+                    }
+                    else {
+                        resultado = num1 / num2;
+                        alert(num1+" / "+num2+" = "+resultado);
+                    }
+                    break;
+                case 5:     // Salir
+                    alert("Gracias por usar el programa");
+                    break;
+                default:    // valor es distinto a los casos expuestos
+                    alert("ERROR: Introdujo un numero fuera de rango");
+                    break;
+            }
+        } while (valor != 5);
+    </script>
+</body>
+</html>

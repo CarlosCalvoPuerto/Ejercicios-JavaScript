@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor_mostaza">
+        <p id="hello_1">p </p>
+        <p id="hello_2">p </p>
+        <p id="hello_3">p </p>
+    </div>
+
+
+    <script>
+        var hello1;
+        var hello2;
+        var hello3;
+
+        function saludo1() {
+            hello1 = prompt("Introduzca el primer saludo...");
+        }
+        function saludo2() {
+            hello2 = prompt("Introduzca el segundo saludo...");
+        }
+        function saludo3() {
+            hello3 = prompt("Introduzca el tercer saludo...");
+        }
+
+        saludo1();
+        saludo2();
+        saludo3();
+
+        document.getElementById('hello_1').innerHTML = hello1;
+        document.getElementById('hello_2').innerHTML = hello2;
+        document.getElementById('hello_3').innerHTML = hello3;
+    </script>
+</body>
+</html>

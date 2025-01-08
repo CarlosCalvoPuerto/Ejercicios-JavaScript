@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <script>
+        var numb1,numb2,operador;
+
+        function calculadora(num1,num2,operacion) {
+            let resultado;
+            
+            switch (operacion.toLowerCase()) {
+                case ("sumar"):
+                    resultado = Number(num1) + Number(num2);
+                    return (resultado);
+                    break;
+
+                case ("restar"):
+                    resultado = Number(num1) - Number(num2);
+                    return (resultado);
+                    break;
+
+                case ("multiplicar"):
+                    resultado = Number(num1) * Number(num2);
+                    return (resultado);
+                    break;
+
+                case ("dividir"):
+                    if (num2 == 0) {
+                        return("Error");
+                    }
+                    else {
+                        resultado = Number(num1) / Number(num2);
+                        return (resultado);
+                    }
+                    break;
+                default:
+                    return("Error");
+                    break;
+            }
+        }
+
+        do {
+            numb1 = prompt("Introduzca el primer numero...");
+            numb2 = prompt("Introduzca el segundo numero...");
+            if (isNaN(numb1) || isNaN(numb2)) {
+                alert("Ha ocurrido un error, vuelva a introducir los numeros");
+            }
+        }while (isNaN(numb1) || isNaN(numb2))
+
+        do {
+            operador = prompt("Introduzca la operacion que desea realizar:\n  - Sumar\n  - Restar\n  - Multiplicar\n  - Dividir");
+            if (operador.toLowerCase()!="sumar" && operador.toLowerCase()!="restar" && operador.toLowerCase()!="multiplicar" && operador.toLowerCase()!="dividir"){
+                alert("Ha ocurrido un error, vuelva a introducir la operacion" + operador);
+            }
+        }while (operador.toLowerCase()!="sumar" && operador.toLowerCase()!="restar" && operador.toLowerCase()!="multiplicar" && operador.toLowerCase()!="dividir")
+
+        alert('El resultado de la operacion "'+operador+'" entre los numeros "'+numb1+'" y "'+numb2+'" es "'+calculadora(numb1,numb2,operador)+'"');
+
+    </script>
+
+</body>
+</html>
